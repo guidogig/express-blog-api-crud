@@ -1,4 +1,4 @@
-import { articoli } from "../articoli.js";
+import { articoli } from "../data/articoli.js";
 
 //index
 export const index = (req, res) => {

@@ -1,6 +1,5 @@
 import express from "express";
 import * as postsController from "../controllers/postsController.js";
-import { articoli } from "../articoli.js";
 
 const postsRouter = express.Router();
 
