@@ -32,6 +32,7 @@ export const show = (req, res) => {
 
 //store
 export const store = (req, res) => {
+  console.log(req.body);
   res.send("Creazione nuovo articolo");
 };
 
@@ -61,12 +62,6 @@ export const destroy = (req, res) => {
   }
 
   articoli.splice(articoli.indexOf(articolo), 1);
-
-  /* QUI RISPONDO CON ARTICOLI DOPO SPLICE E ID ARTICOLO CANCELLATO 
-    res.json({
-    articoli: articoli,
-    cancellato: `Cancellato l'articolo con ID: ${articolo.id}`,
-  }); */
 
   console.log({ articoli: articoli });
 
