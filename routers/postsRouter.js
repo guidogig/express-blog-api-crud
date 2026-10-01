@@ -1,7 +1,12 @@
 import express from "express";
 import * as postsController from "../controllers/postsController.js";
+//import { checkTime } from "../middlewares/checkTime.js";
+//import { errorHandler } from "../middlewares/utilityMiddlewares.js";
 
 const postsRouter = express.Router();
+
+//postsRouter.use(checkTime);
+//postsRouter.use(errorHandler);
 
 //index
 postsRouter.get("/", postsController.index);

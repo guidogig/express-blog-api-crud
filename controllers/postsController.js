@@ -35,16 +35,15 @@ export const store = (req, res) => {
   const newId = articoli[articoli.length - 1].id + 1;
   const newArticolo = {
     id: newId,
-    title: "Crostoni zucca e brie",
-    content:
-      "Tostare delle fette di pane, aggiungere la pasta di zucca e delle fette di brie, ripassare in grill per qualche minuto",
-    img: "images/crostoni_zucca.jpeg",
-    tags: ["salati", "allergeni", "autunno"],
+    title: req.body.title,
+    content: req.body.content,
+    img: req.body.img,
+    tags: req.body.tags,
   };
 
   articoli.push(newArticolo);
 
-  console.log(articoli);
+  console.log({ "Articolo inserito:": articoli[articoli.length - 1] });
 
   res.status(201);
   res.json(newArticolo);
